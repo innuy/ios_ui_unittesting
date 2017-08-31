@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--First screen-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TestExamples" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6uG-pd-7aE">
+                                <rect key="frame" x="146" y="318.5" width="83" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="nextButton"/>
+                                <state key="normal" title="Next screen"/>
+                                <connections>
+                                    <action selector="onClickJorge:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bhN-Ez-HH2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.95172387089999999" blue="0.92317879199999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6uG-pd-7aE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3lz-3G-EL0"/>
+                            <constraint firstItem="6uG-pd-7aE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="m0l-LR-hDp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="First screen" id="mOY-Xl-eRS"/>
+                    <connections>
+                        <segue destination="Kjk-M3-BTE" kind="show" identifier="mainSegue" id="62v-lO-Jxg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="31" y="124"/>
+        </scene>
+        <!--Swipe Screen Controller-->
+        <scene sceneID="HUl-hB-nMm">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="Kjk-M3-BTE" customClass="SwipeScreenController" customModule="TestExamples" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YVZ-q9-BG3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="841" y="124"/>
+        </scene>
+        <!--First Swipe Controller-->
+        <scene sceneID="tH1-PP-V4F">
+            <objects>
+                <viewController storyboardIdentifier="firstSwipeScreen" modalTransitionStyle="flipHorizontal" id="XLU-Ds-FtU" customClass="FirstSwipeController" customModule="TestExamples" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3lB-hc-2fh"/>
+                        <viewControllerLayoutGuide type="bottom" id="EgS-eL-9il"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XRY-mL-YeW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is my first screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1E-kV-jv7">
+                                <rect key="frame" x="104" y="323" width="167" height="21"/>
+                                <accessibility key="accessibilityConfiguration" identifier="firstScreenLabel"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.95172387089999999" blue="0.92317879199999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="G1E-kV-jv7" firstAttribute="centerX" secondItem="XRY-mL-YeW" secondAttribute="centerX" id="ZRB-JB-ntM"/>
+                            <constraint firstItem="G1E-kV-jv7" firstAttribute="centerY" secondItem="XRY-mL-YeW" secondAttribute="centerY" id="k5D-p8-YEr"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zfk-xd-P4Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="521" y="778"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="UuG-gg-tno">
+            <objects>
+                <viewController storyboardIdentifier="secondSwipeScreen" modalTransitionStyle="flipHorizontal" id="Ibb-pS-cpm" customClass="SecondSwipeController" customModule="TestExamples" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5oG-jw-DH0"/>
+                        <viewControllerLayoutGuide type="bottom" id="rfO-bU-SlM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fgf-hz-9LJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is my second screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0M-yr-bIy">
+                                <rect key="frame" x="90.5" y="323" width="194" height="21"/>
+                                <accessibility key="accessibilityConfiguration" identifier="secondScreenLabel"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.95172387089999999" blue="0.92317879199999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="i0M-yr-bIy" firstAttribute="centerX" secondItem="fgf-hz-9LJ" secondAttribute="centerX" id="fxY-F8-hYI"/>
+                            <constraint firstItem="i0M-yr-bIy" firstAttribute="centerY" secondItem="fgf-hz-9LJ" secondAttribute="centerY" id="ymF-KY-SPJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="nxQ-iD-BLf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ACC-4X-5IC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1270" y="778"/>
+        </scene>
+    </scenes>
+</document>
